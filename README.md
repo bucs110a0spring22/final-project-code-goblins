@@ -9,9 +9,13 @@
 
 << [link to demo presentation slides](#) >>
 
-### Team: << team name >>
+### Team: Code Goblins
 #### << Team Members >>
+Walter Hoess
 
+Evan Liu
+
+Tajrean Ahmed
 ***
 
 ## Project Description *(Software Lead)*
