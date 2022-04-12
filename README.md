@@ -15,7 +15,7 @@
 
 ## Project Description *(Software Lead)*
 
-Our project is a variation of a brick-breaker game.
+Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. There are multiple levels, and each new level has a chance of dropping a new power-up. Your score will be shown at game-over.
 
 ***    
 
@@ -49,9 +49,10 @@ The Project is broken down into the following file structure:
 
 * main.py
 * src
-    * <all of your python files should go here>
+    * None
 * assets
-    * <all of your media, i.e. images, font files, etc, should go here)
+    * class_diagram.jpg
+    * interface_draft1.jpg
 * etc
     * <This is a catch all folder for things that are not part of your project, but you want to keep with your project. Your demo video should go here.>
 
@@ -61,17 +62,23 @@ The Project is broken down into the following file structure:
 
    * You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
 
-### Software Lead - << name >>
+### Software Lead - Evan Liu
 
 << Worked as integration specialist by... >>
 
-### Front End Specialist - << name >>
+The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README.
+
+### Front End Specialist - Walter Hoess
 
 << Front-end lead conducted significant research on... >>
 
-### Back End Specialist - << name >>
+The front end lead was responsible for designing the draft and final interface for the game. 
+
+### Back End Specialist - Tajrean Ahmed
 
 << The back end specialist... >>
+
+The back end specialist was responsible for drawing class diagrams and creating data models for objects in code. 
 
 ## Testing *(Software Lead)*
 
