@@ -1,34 +1,31 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 # CS110 Project Proposal
-# << Project Title >>
+# Super Block Breaker
 ## CS 110 Final Project
-### << Semester, Year >>
+### Spring Semester, 2022
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
 
-<< [repl](#) >>
+<< [repl](https://replit.com/join/oyhjmlfacb-walterhoess) >>
 
 << [link to demo presentation slides](#) >>
 
 ### Team: Code Goblins
-#### << Team Members >>
-Walter Hoess
-
-Evan Liu
-
-Tajrean Ahmed
+#### Tajrean Ahmed, Walter Hoess, Evan Liu
 ***
 
 ## Project Description *(Software Lead)*
 
-<< Give an overview of your project >>
+Our project is a variation of a brick-breaker game.
 
 ***    
 
 ## User Interface Design *(Front End Specialist)*
 
-* << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. >>
-    * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
-* << You should also have a screenshot of each screen for your final GUI >>
+![User Interface Design](assets/interface_draft1.jpg)
+* A start menu, in-game interface, and game over menu for our block breaker game.
+* The start menu is a simple "start" button.
+* The in-game interface will consist of a player-controlled platform which bounces the block breaker ball, and the ball itself.
+* The game over menu displays after no balls are left on screen, and after a delay, transitions back into the start menu.
 
 ***        
 
