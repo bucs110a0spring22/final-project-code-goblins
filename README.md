@@ -30,18 +30,19 @@ Our project is a variation of a brick-breaker game. Bounce a ball around by movi
 ***        
 
 ## Program Design *(Backend Specialist)*
-
 * Non-Standard libraries
     * << You should have a list of any additional libraries or modules used (pygame, request) beyond non-standard python. >>
     * For each additional module you should include
         * url for the module documentation
         * a short description of the module
 * Class Interface Design
-    * << A simple drawing that shows the class relationships in your code (see below for an example). >>
-        * ![class diagram](assets/class_diagram.jpg)
-    * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
+![Class Diagram](assets/class_diagram_draft1.png)
 * Classes
-    * << You should have a list of each of your classes with a description. >>
+    * Button - Buttons which the player can interact with in menus
+    * Board - A player-controlled board moving left and right at the bottom of the screen, bounces the ball
+    * Ball - A bouncing ball that breaks blocks when it collides with them
+    * Block - Blocks which are broken by the ball, and may drop powerups. Each broken block adds to the score.
+    * Powerup - Items dropped by blocks which, when picked up by the board, triggers various effects
 
 ## Project Structure *(Software Lead)*
 
