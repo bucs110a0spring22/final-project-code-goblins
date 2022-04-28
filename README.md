@@ -67,7 +67,7 @@ The Project is broken down into the following file structure:
 
 << Worked as integration specialist by... >>
 
-The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README.
+The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README. The software lead also provided feedback and input for the decisions made by the front end specialist and back end specialist.
 
 ### Front End Specialist - Walter Hoess
 
