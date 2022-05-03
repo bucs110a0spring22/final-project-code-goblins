@@ -84,13 +84,22 @@ The back end specialist was responsible for drawing class diagrams and creating 
 
 ## Testing *(Software Lead)*
 
-* << Describe your testing strategy for your project. >>
-    * << Example >>
+* Run code to make sure it is functioning. Go down the list of things to be tested. For controls, press each key to make sure it performs the expected action. For in-game events, allow those events to occur and make sure they match up with expected behavior. 
+    * No examples. Code is nonfunctioning.
 
 ## ATP
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
 | ----------------------|:-------------:| -----------------:| -------------- |
-|  1  | Run Counter Program  | GUI window appears with count = 0  |          |
-|  2  | click count button  | display changes to count = 1 |                 |
-etc...
+|  1  | Run main.py     | Game window and start menu appears.|               |
+|  2  | Click Start button  | Game begins, with board, blocks, and ball. |   |
+|  3  | Press A         | Board moves left. | |
+|  4  | Press D         | Board moves right. | |
+|  5  | Let ball hit board | Ball bounces horizontally (same x speed, flipped y speed). | |
+|  6  | Let ball hit block | Ball bounces horizontally (same x speed, flipped y speed). Block breaks, 1 is added to the score. | |
+|  7  | Let ball hit left wall | Ball bounces vertically (flipped x speed, same y speed) | |
+|  8  | Let ball hit right wall | Ball bounces vertically (flipped x speed, same y speed) | |
+|  9  | Let ball hit bottom wall | Ball bounces horizontally (same x speed, flipped y speed). 1 life is deducted from the total count. | |
+|  10 | Let ball hit top wall | Ball bounces horizontally (same x speed, flipped y speed). | |
+|  12 | Let life reach 0 | Game over screen displays, game ends. | |
+|  13 | Break all blocks | Win game screen displays with total score, game ends. | |
