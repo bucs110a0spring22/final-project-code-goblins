@@ -15,7 +15,7 @@
 
 ## Project Description *(Software Lead)*
 
-Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. There are multiple levels, and each new level has a chance of dropping a new power-up. Your score will be shown at game-over.
+Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. Breaking blocks has a chance of dropping powerups. Your score will be shown at game-over.
 
 ***    
 
@@ -50,12 +50,19 @@ The Project is broken down into the following file structure:
 
 * main.py
 * src
-    * None
+    * ball.py
+    * block.py
+    * board.py
+    * button.py
+    * powerup.py
+    * controller.py
 * assets
+    * ball.png
     * class_diagram.jpg
+    * class_diagram_draft1.png
     * interface_draft1.jpg
 * etc
-    * <This is a catch all folder for things that are not part of your project, but you want to keep with your project. Your demo video should go here.>
+    * 
 
 ***
 
@@ -65,21 +72,15 @@ The Project is broken down into the following file structure:
 
 ### Software Lead - Evan Liu
 
-<< Worked as integration specialist by... >>
-
-The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README. The software lead also provided feedback and input for the decisions made by the front end specialist and back end specialist.
+The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README. The software lead also provided feedback (comments in code), input for the decisions made by the front end specialist and back end specialist, and contributed to code/assets where necessary. Also responsible for resolving bugs in code, and testing the program to make sure everything worked.
 
 ### Front End Specialist - Walter Hoess
 
-<< Front-end lead conducted significant research on... >>
-
-The front end lead was responsible for designing the draft and final interface for the game. 
+The front end lead was responsible for designing the draft and final interface for the game. Primarily responsible for writing the controller, which was responsible for initial window setup and game loops. These loops managed interactions between sprites on-screen, constructed menus, and defined win-lose conditions. The controller also managed the game state based on in-game progress, and updated the screen based on changes.
 
 ### Back End Specialist - Tajrean Ahmed
 
-<< The back end specialist... >>
-
-The back end specialist was responsible for drawing class diagrams and creating data models for objects in code. 
+The back end specialist was responsible for drawing class diagrams and creating models for objects in code. These models were designed to have functions required by the controller, such as inverting the direction of the ball once the controller detected a collision with a surface. Models were based on pygame sprites.
 
 ## Testing *(Software Lead)*
 
