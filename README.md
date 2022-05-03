@@ -5,7 +5,7 @@
 ### Spring Semester, 2022
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit#)
 
-<< [repl](https://replit.com/join/oyhjmlfacb-walterhoess) >>
+[Code Goblins Final Project repl](https://replit.com/join/oyhjmlfacb-walterhoess)
 
 << [link to demo presentation slides](#) >>
 
@@ -15,7 +15,7 @@
 
 ## Project Description *(Software Lead)*
 
-Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. Breaking blocks has a chance of dropping powerups. Your score will be shown at game-over.
+Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. Hitting the bottol wall will deduct a life. When life reaches 0, or when all blocks arr broken, the game ends. Your score will be shown at game-over.
 
 ***    
 
@@ -31,18 +31,16 @@ Our project is a variation of a brick-breaker game. Bounce a ball around by movi
 
 ## Program Design *(Backend Specialist)*
 * Non-Standard libraries
-    * << You should have a list of any additional libraries or modules used (pygame, request) beyond non-standard python. >>
-    * For each additional module you should include
-        * url for the module documentation
-        * a short description of the module
+    * pygame-menu
+      * https://pygame-menu.readthedocs.io/en/4.2.8/
+      * Module for designing menu components and functions for the start menu.
+
 * Class Interface Design
 ![Class Diagram](assets/class_diagram_draft1.png)
 * Classes
-    * Button - Buttons which the player can interact with in menus
     * Board - A player-controlled board moving left and right at the bottom of the screen, bounces the ball
     * Ball - A bouncing ball that breaks blocks when it collides with them
     * Block - Blocks which are broken by the ball, and may drop powerups. Each broken block adds to the score.
-    * Powerup - Items dropped by blocks which, when picked up by the board, triggers various effects
 
 ## Project Structure *(Software Lead)*
 
@@ -53,16 +51,15 @@ The Project is broken down into the following file structure:
     * ball.py
     * block.py
     * board.py
-    * button.py
-    * powerup.py
     * controller.py
+    * foldercontents.txt
 * assets
     * ball.png
-    * class_diagram.jpg
-    * class_diagram_draft1.png
-    * interface_draft1.jpg
+    * class_diagram_1.png
+    * interface_1.jpg
+    * foldercontents.txt
 * etc
-    * 
+    * foldercontents.txt
 
 ***
 
