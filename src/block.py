@@ -7,9 +7,11 @@ class Block(pygame.sprite.Sprite):
     self.height = 30
     self.image = pygame.Surface((self.width, self.height))
     self.image.fill((color))
-    self.rect = self.image.get_rect()
-    self.rect.x = x
-    self.rect.y = y
+
+    self.rect = pygame.Rect(x, y, self.width, self.height)
+    # self.rect = self.image.get_rect()
+    # self.rect.x = x
+    # self.rect.y = y
 
 
 # No longer a need to add a function for powerups; project progress

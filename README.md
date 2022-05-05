@@ -67,7 +67,7 @@ The Project is broken down into the following file structure:
 
 ### Software Lead - Evan Liu
 
-The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README. The software lead also provided feedback (comments in code), input for the decisions made by the front end specialist and back end specialist, and contributed to code/assets where necessary. Also responsible for resolving bugs in code, and testing the program to make sure everything worked.
+The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README. The software lead also provided feedback (comments in code), input for the decisions made by the front end specialist and back end specialist, and contributed to developing both models and the controller. Also responsible for resolving bugs in code, and testing the program to make sure everything worked.
 
 ### Front End Specialist - Walter Hoess
 
