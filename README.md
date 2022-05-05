@@ -7,7 +7,7 @@
 
 [Code Goblins Final Project repl](https://replit.com/join/oyhjmlfacb-walterhoess)
 
-<< [link to demo presentation slides](#) >>
+[Super Block Breaker Presentation Demo](#)
 
 ### Team: Code Goblins
 #### Tajrean Ahmed, Walter Hoess, Evan Liu
@@ -21,7 +21,7 @@ Our project is a variation of a brick-breaker game. Bounce a ball around by movi
 
 ## User Interface Design *(Front End Specialist)*
 
-![User Interface Design](assets/interface_draft1.jpg)
+![User Interface Design](assets/interface_1.jpg)
 * A start menu, in-game interface, and game over menu for our block breaker game.
 * The start menu is a simple "start" button.
 * The in-game interface will consist of a player-controlled platform which bounces the block breaker ball, and the ball itself.
@@ -36,7 +36,7 @@ Our project is a variation of a brick-breaker game. Bounce a ball around by movi
       * Module for designing menu components and functions for the start menu.
 
 * Class Interface Design
-![Class Diagram](assets/class_diagram_draft1.png)
+![Class Diagram](assets/class_diagram_1.png)
 * Classes
     * Board - A player-controlled board moving left and right at the bottom of the screen, bounces the ball
     * Ball - A bouncing ball that breaks blocks when it collides with them
@@ -64,8 +64,6 @@ The Project is broken down into the following file structure:
 ***
 
 ## Tasks and Responsibilities *(Software Lead)*
-
-   * You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
 
 ### Software Lead - Evan Liu
 

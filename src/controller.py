@@ -1,9 +1,13 @@
 import pygame
+import sys
 from src import ball
 from src import block
 from src import board
-from src import button
-from src import powerup
+from src import utility
+
+import pygame
+import sys
+
 
 # Things that the controller should be able to do:
 #   Initialize the screen (width, height, background)
@@ -13,34 +17,50 @@ from src import powerup
 #   Bounce the ball once it detects a collision with another sprite
 #   
 
+
 class Controller:
   
   def __init__(self):
     #setup pygame data
+    pygame.init()    
+    self.window_width = 720
+    self.window_height = 720
+    self.screen = pygame.display.set_mode((self.window_width, self.window_height))
+    self.utility = utility.Utility()
+    
+    #fps: #pygame.time.Clock()
+    #run = True
+    #while run:
+      #pygame.time(60)
     
   def mainloop(self):
+    self.gameloop()
     #select state loop
     
   
   ### below are some sample loop states ###
 
   def menuloop(self):
-    
-      #event loop
+    pass
 
-      #update data
-
-      #redraw
       
   def gameloop(self):
-      #event loop
+    self.blocks = pygame.sprite.Group()
+    for i in range(10):
+      self.blocks.add(block.Block(10 + i*70, 10, self.utility.RED))
+      self.blocks.add(block.Block(10 + i*70, 45, self.utility.BLUE))
+      self.blocks.add(block.Block(10 + i*70, 80, self.utility.GREEN))
 
       #update data
 
       #redraw
+    while True:
+      self.blocks.draw(self.screen)
+      pygame.display.flip()
     
   def gameoverloop(self):
-      #event loop
+    pass  
+    #event loop
 
       #update data
 

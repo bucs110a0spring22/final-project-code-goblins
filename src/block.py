@@ -1,24 +1,20 @@
 import pygame
 
 class Block(pygame.sprite.Sprite):
-  def __init__(self):
+  def __init__(self, x, y, color):
     super().__init__()
-    self.width = 50
+    self.width = 65
     self.height = 30
-    self.rect = pygame.rect(self.height, self.width, 0, 0)
-    
- 
-  def blocks(self):      # Sprite groups are handeled by the controller
-    block = []           # You should also be using the pygame.sprite.Group()
-    def x(self):         # class instead of a list
-      for x in range(x):
-      block_x = 50*x
-    
-  def y(self):            # I don't know what these functions are for?
-      for y in range(y):
-      block_y = 30*y
+    self.image = pygame.Surface((self.width, self.height))
+    self.image.fill((color))
+    self.rect = self.image.get_rect()
+    self.rect.x = x
+    self.rect.y = y
 
-# Should have a function to randomly determine if it drops a powerup
-# (e.g. return a boolean True or False)
+
+# No longer a need to add a function for powerups; project progress
+# delayed for too long, no time to implement
 # Blocks should be able to be assigned a color; controller should be able
-# to randomly pick a color, which is then passed to the sprite
+# to pick a color, which is then passed to the sprite
+# Can either leave to controller to pass RBG values, or allow the controller
+# to pass a string like "RED" or "BLUE" and set color accordingly

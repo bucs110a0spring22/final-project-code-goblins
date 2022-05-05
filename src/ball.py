@@ -8,13 +8,17 @@ class Ball(pygame.sprite.Sprite):
     self.speed = [0, 5]
       
   def bounce(self, axis):
-    if axis == "horizontal":            # Horizontal bounces flips the y speed
+    # Horizontal bounces flips the y speed
+    # Vertical bounces flip the x speed
+    if axis == "horizontal":
       self.speed[1] = -self.speed[1]
-    elif axis == "vertical":            # Vertical bounces flip the x speed
+    elif axis == "vertical":
       self.speed[0] = -self.speed[0]
       
   def update(self):
     self.rect.move(self.speed)
+
+# Collisions should be handled by the controller
     
     
   

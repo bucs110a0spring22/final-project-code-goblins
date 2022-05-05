@@ -1,19 +1,18 @@
-import pygame 
+import pygame
 
 class Board(pygame.sprite.Sprite):
-  def __init__(self):
+
+  def __init__(self, x, y, w, h, color):
     super().__init__()
-    self.height = 20
-    self.width = 100
+    self.color = (0, 0, 0)
+    self.h = 20
+    self.w = 100
     self.x = 0
     self.y = 0
-    self.speed = 20
-    self.rect = pygame.rect(self.height, self.width, self.x, self.y)
+    self.rect = pygame.rect(self.h, self.w, self.x, self.y)
 
-  def move_board(self):                       # Event interpretation
-    self.direction = 0                        # should be handeled by the
-    key = pygame.key.press()                  # controller
-    if key[pygame.A] and self.rect.A > 0:
+  def move_board(self, direction):                       
+    if direction == le and self.rect.A > 0:
       self.direction = -1
     if key[pygame.D] and self.rect.D < 0:
       self.direction = 1
