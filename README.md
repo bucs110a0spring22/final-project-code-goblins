@@ -15,7 +15,7 @@
 
 ## Project Description *(Software Lead)*
 
-Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. Hitting the bottol wall will deduct a life. When life reaches 0, or when all blocks arr broken, the game ends. Your score will be shown at game-over.
+Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. Hitting the bottom wall will deduct a life. When life reaches 0, or when all blocks are broken, the game ends. Your score will be shown at game-over.
 
 ***    
 
@@ -67,34 +67,35 @@ The Project is broken down into the following file structure:
 
 ### Software Lead - Evan Liu
 
-The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README. The software lead also provided feedback (comments in code), input for the decisions made by the front end specialist and back end specialist, and contributed to developing both models and the controller. Also responsible for resolving bugs in code, and testing the program to make sure everything worked.
+The software lead was responsible for uploading files for the project, keeping track of team progress and updating progress in the README. The software lead also provided feedback (comments in code), input for the decisions made by the front end specialist and back end specialist, and extensively contributed to developing both models and the controller. Drew all picture assets. Also responsible for resolving bugs in code, and testing the program to make sure everything worked.
 
 ### Front End Specialist - Walter Hoess
 
-The front end lead was responsible for designing the draft and final interface for the game. Primarily responsible for writing the controller, which was responsible for initial window setup and game loops. These loops managed interactions between sprites on-screen, constructed menus, and defined win-lose conditions. The controller also managed the game state based on in-game progress, and updated the screen based on changes.
+The front end lead was responsible for designing the draft interface for the game. Primarily responsible for writing the controller, which was responsible for window setup and game loops. These loops managed interactions between sprites on-screen, constructed menus, and defined win-lose conditions. The controller also managed the game state based on in-game progress, and updated the screen based on changes.
 
 ### Back End Specialist - Tajrean Ahmed
 
-The back end specialist was responsible for drawing class diagrams and creating models for objects in code. These models were designed to have functions required by the controller, such as inverting the direction of the ball once the controller detected a collision with a surface. Models were based on pygame sprites.
+The back end specialist was responsible for drawing class diagrams and creating models for objects in code. Model functions were used by the controller for managing in-game occurences, and updating the state of the game. Models were based on pygame sprites, which was used to manage model properties and functions, and mediate interactions between models.
 
 ## Testing *(Software Lead)*
 
 * Run code to make sure it is functioning. Go down the list of things to be tested. For controls, press each key to make sure it performs the expected action. For in-game events, allow those events to occur and make sure they match up with expected behavior. 
-    * No examples. Code is nonfunctioning.
+    * Code tested extensively as it was being written to ensure correct functionality.
 
 ## ATP
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
 | ----------------------|:-------------:| -----------------:| -------------- |
 |  1  | Run main.py     | Game window and start menu appears.|               |
-|  2  | Click Start button  | Game begins, with board, blocks, and ball. |   |
-|  3  | Press A         | Board moves left. | |
-|  4  | Press D         | Board moves right. | |
-|  5  | Let ball hit board | Ball bounces horizontally (same x speed, flipped y speed). | |
-|  6  | Let ball hit block | Ball bounces horizontally (same x speed, flipped y speed). Block breaks, 1 is added to the score. | |
-|  7  | Let ball hit left wall | Ball bounces vertically (flipped x speed, same y speed) | |
-|  8  | Let ball hit right wall | Ball bounces vertically (flipped x speed, same y speed) | |
-|  9  | Let ball hit bottom wall | Ball bounces horizontally (same x speed, flipped y speed). 1 life is deducted from the total count. | |
-|  10 | Let ball hit top wall | Ball bounces horizontally (same x speed, flipped y speed). | |
-|  12 | Let life reach 0 | Game over screen displays, game ends. | |
+|  2  | Click Quit      | Program exits. | |
+|  3  | Click Play      | Game begins, with board, blocks, and ball. |   |
+|  4  | Press A         | Board moves left. | |
+|  5  | Press D         | Board moves right. | |
+|  6  | Let ball hit board | Ball bounces inversely (flipped x and y speed). | |
+|  7  | Let ball hit block | Ball bounces horizontally (same x speed, flipped y speed). Block breaks, 1 is added to the score. | |
+|  8  | Let ball hit left wall | Ball bounces vertically (flipped x speed, same y speed) | |
+|  9  | Let ball hit right wall | Ball bounces vertically (flipped x speed, same y speed) | |
+|  10  | Let ball hit bottom wall | Ball bounces horizontally (same x speed, flipped y speed). 1 life is deducted from the total count. | |
+|  11 | Let ball hit top wall | Ball bounces horizontally (same x speed, flipped y speed). | |
+|  12 | Let life reach 0 | Game over screen displays with total score, game ends. | |
 |  13 | Break all blocks | Win game screen displays with total score, game ends. | |

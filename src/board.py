@@ -2,20 +2,20 @@ import pygame
 
 class Board(pygame.sprite.Sprite):
 
-  def __init__(self, x, y, w, h, color):
+  def __init__(self, x=0, y=0, w=100, h=20, color=(0,0,0)):
     super().__init__()
-    self.color = (0, 0, 0)
-    self.h = 20
-    self.w = 100
-    self.x = 0
-    self.y = 0
-    self.rect = pygame.rect(self.h, self.w, self.x, self.y)
+    self.color = color
+    self.h = h
+    self.w = w
+    self.image = pygame.Surface((self.w, self.h))
+    self.image.fill((color))
+    self.rect = pygame.Rect(x, y, self.w, self.h)
 
-  def move_board(self, direction):                       
-    if direction == le and self.rect.A > 0:
-      self.direction = -1
-    if key[pygame.D] and self.rect.D < 0:
-      self.direction = 1
+  def move(self, direction):                       
+    if direction == "left":
+      self.rect.x -= 1
+    if direction == "right":
+      self.rect.x += 1
       
     #change starting pos and speed depending on screen size (note to self)
     # Note by Software Lead: I don't think it has to be that complicated;
