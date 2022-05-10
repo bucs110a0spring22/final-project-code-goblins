@@ -73,25 +73,25 @@ The Project is broken down into the following file structure:
 
 * main.py
 * .github
+  * .keep
 * assets
+    * assets_final.png
     * ball.png
     * class_diagram_1.png
-    * foldercontents.txt
     * game_over_screen.png
     * game_screen.png
     * interface_1.jpg
     * sbb_bg.png
     * start_menu.png
 * etc
-    * foldercontents.txt
+    * None
 * src
+    * \_\_pycache__
     * ball.py
     * block.py
     * board.py
     * controller.py
-    * foldercontents.txt
     * utility.py
-
 * README.md
 
 ***
