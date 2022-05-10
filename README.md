@@ -84,7 +84,7 @@ The Project is broken down into the following file structure:
     * sbb_bg.png
     * start_menu.png
 * etc
-    * None
+    * scoreboard.txt
 * src
     * \_\_pycache__
     * ball.py

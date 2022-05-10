@@ -172,9 +172,14 @@ class Controller:
     '''
     Determines game over menu based on win or lose (life count).
     Displays game over screen, score, and quits after a 5 second delay.
+    Saves score to etc/scoreboard.txt for reference.
     args: none
     return: none
     '''
+    scoreboard = open("etc/scoreboard.txt", "a")
+    scoreboard.write(f"\nScore: {self.score}")
+    scoreboard.close()
+    
     if self.lives <= 0:
       over_message = self.font.render("You lose!", False, self.utility.WHITE) 
     else:
