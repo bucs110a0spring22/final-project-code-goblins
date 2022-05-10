@@ -48,6 +48,10 @@ class Controller:
     self.player = pygame.sprite.Group()
     self.board = board.Board(x=310,y=500,w=100,h=20, color=self.utility.WHITE)
     self.player.add(self.board)
+    self.rightinviswall_x = self.window_width - self.board.w
+      # necessary because distance to wall is calculated from top
+      # left pixel of board rectangle
+    
     # sets up a ball
     self.ball = ball.Ball(x=280, y=400)
     self.balls = pygame.sprite.Group()
@@ -112,9 +116,15 @@ class Controller:
     # move paddle when player presses A or D
     keys = pygame.key.get_pressed()
     if keys[pygame.K_a]:
-      self.board.move("left")
+      if self.board.rect.x <= 0:
+        self.board.rect.x = 0
+      else:
+        self.board.move("left")
     if keys[pygame.K_d]:
-      self.board.move("right")
+      if self.board.rect.x >= self.rightinviswall_x:
+        self.board.rect.x = self.rightinviswall_x
+      else:
+        self.board.move("right")
 
     # updating lives and score
     self.lifedisplay = self.font.render(f'Lives: {self.lives}', False, self.utility.BLACK)
