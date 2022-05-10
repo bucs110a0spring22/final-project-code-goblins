@@ -57,12 +57,15 @@ Final game over screen.
       * Module for designing menu components and functionality, and calling functions when menu buttons are pressed.
 
 * Class Interface Design
-![Class Diagram](assets/class_diagram_1.png)
+  * Original Class diagram
+![Original Class Diagram](assets/class_diagram_1.png)
+  * Final class diagrem
+![Final Class Diagram](assets/assets_final.png)
 * Classes
     * Board - A player-controlled board moving left and right at the bottom of the screen, bounces the ball.
     * Ball - A bouncing ball that breaks blocks when it collides with them.
     * Block - Blocks which are broken by the ball. Each broken block adds to the score.
-    * Utility - Uility class for holding RGB color constants.
+    * Utility - Utility class for holding RGB color constants.
 
 ## Project Structure *(Software Lead)*
 
@@ -127,5 +130,7 @@ The back end specialist was responsible for drawing class diagrams and creating 
 |  9  | Let ball hit right wall | Ball bounces vertically (flipped x speed, same y speed) | |
 |  10  | Let ball hit bottom wall | Ball bounces horizontally (same x speed, flipped y speed). 1 life is deducted from the total count. | |
 |  11 | Let ball hit top wall | Ball bounces horizontally (same x speed, flipped y speed). | |
-|  12 | Let life reach 0 | Game over screen displays with total score, game automatically ends after a short delay. | |
-|  13 | Break all blocks | Win game screen displays with total score, game automatically ends after a short delay. | |
+|  12 | Let life reach 0 | Game over screen displays with total score and lose message, game automatically ends after a short delay. | |
+|  13 | Break all blocks | Win game screen displays with total score and win message, game automatically ends after a short delay. | |
+| 14 | Press A until board hits left wall. | Board stops at left wall. | |
+| 15 | Press D until board hits right hall. | Board stops at right wall. | |

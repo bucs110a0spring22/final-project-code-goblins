@@ -129,7 +129,8 @@ class Controller:
     # updating lives and score
     self.lifedisplay = self.font.render(f'Lives: {self.lives}', False, self.utility.BLACK)
     self.scoredisplay = self.font.render(f'Score: {self.score}', False, self.utility.BLACK)
-    
+
+    # draw everything to screen
     self.blocks.update()
     self.player.update()
     self.balls.update()
