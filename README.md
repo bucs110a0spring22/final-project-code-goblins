@@ -80,7 +80,7 @@ The back end specialist was responsible for drawing class diagrams and creating 
 ## Testing *(Software Lead)*
 
 * Run code to make sure it is functioning. Go down the list of things to be tested. For controls, press each key to make sure it performs the expected action. For in-game events, allow those events to occur and make sure they match up with expected behavior. 
-    * Code tested extensively as it was being written to ensure correct functionality.
+    * Having heavily participated in writing both models and the controller, testing was performed by the Software Lead as code was being written, in order to ensure expected behavior. Code was committed to GitHub after major changes, bug fixes, and the addition of new features.
 
 ## ATP
 
@@ -88,14 +88,14 @@ The back end specialist was responsible for drawing class diagrams and creating 
 | ----------------------|:-------------:| -----------------:| -------------- |
 |  1  | Run main.py     | Game window and start menu appears.|               |
 |  2  | Click Quit      | Program exits. | |
-|  3  | Click Play      | Game begins, with board, blocks, and ball. |   |
+|  3  | Click Play      | Game begins with a board, blocks, a ball, a score counter, and a life counter. |   |
 |  4  | Press A         | Board moves left. | |
 |  5  | Press D         | Board moves right. | |
-|  6  | Let ball hit board | Ball bounces inversely (flipped x and y speed). | |
+|  6  | Let ball hit board | Ball bounces horizontally (same x speed, flipped y speed). | |
 |  7  | Let ball hit block | Ball bounces horizontally (same x speed, flipped y speed). Block breaks, 1 is added to the score. | |
 |  8  | Let ball hit left wall | Ball bounces vertically (flipped x speed, same y speed) | |
 |  9  | Let ball hit right wall | Ball bounces vertically (flipped x speed, same y speed) | |
 |  10  | Let ball hit bottom wall | Ball bounces horizontally (same x speed, flipped y speed). 1 life is deducted from the total count. | |
 |  11 | Let ball hit top wall | Ball bounces horizontally (same x speed, flipped y speed). | |
-|  12 | Let life reach 0 | Game over screen displays with total score, game ends. | |
-|  13 | Break all blocks | Win game screen displays with total score, game ends. | |
+|  12 | Let life reach 0 | Game over screen displays with total score, game automatically ends after a short delay. | |
+|  13 | Break all blocks | Win game screen displays with total score, game automatically ends after a short delay. | |
