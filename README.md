@@ -1,4 +1,3 @@
-:warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 # CS110 Project Proposal
 # Super Block Breaker
 ## CS 110 Final Project
@@ -15,17 +14,39 @@
 
 ## Project Description *(Software Lead)*
 
-Our project is a variation of a brick-breaker game. Bounce a ball around by moving left and right with a platform, until all the blocks are broken. Hitting the bottom wall will deduct a life. When life reaches 0, or when all blocks are broken, the game ends. Your score will be shown at game-over.
+Our project is a variation of a brick-breaker game. Bounce a ball around by moving a platform left and right, bouncing them into blocks and breaking them. Game ends when all the blocks are broken, or when all lives are depleted. Hitting the bottom wall will deduct a life. When life reaches 0, or when all blocks are broken, the game ends. Your score will be shown at game-over.
 
 ***    
 
 ## User Interface Design *(Front End Specialist)*
-
-![User Interface Design](assets/interface_1.jpg)
+Initial draft design.
 * A start menu, in-game interface, and game over menu for our block breaker game.
 * The start menu is a simple "start" button.
 * The in-game interface will consist of a player-controlled platform which bounces the block breaker ball, and the ball itself.
 * The game over menu displays after no balls are left on screen, and after a delay, transitions back into the start menu.
+
+![User Interface Design](assets/interface_1.jpg)
+
+Final start menu. 
+* Created with pygame-menu.
+* The play button starts the game, and the quit button exits the program.
+
+![Final Start Menu](assets/start_menu.png)
+
+Final game screen. 
+* A ball moves throughout the screen, bouncing upon hitting a surface.
+* Hitting a block destroys that blocks and adds 1 to the score.
+* Hitting the bottom of the screen subtract 1 from the life count.
+* Board can move left and right, and is player controlled.
+
+![Final Game Screen](assets/game_screen.png)
+
+Final game over screen. 
+* Displays win/lose status, and final score at time of game over.
+* After five seconds, exits the program.
+  
+![Final Game Over Screen](assets/game_over_screen.png)
+
 
 ***        
 
@@ -33,33 +54,42 @@ Our project is a variation of a brick-breaker game. Bounce a ball around by movi
 * Non-Standard libraries
     * pygame-menu
       * https://pygame-menu.readthedocs.io/en/4.2.8/
-      * Module for designing menu components and functions for the start menu.
+      * Module for designing menu components and functionality, and calling functions when menu buttons are pressed.
 
 * Class Interface Design
 ![Class Diagram](assets/class_diagram_1.png)
 * Classes
-    * Board - A player-controlled board moving left and right at the bottom of the screen, bounces the ball
-    * Ball - A bouncing ball that breaks blocks when it collides with them
-    * Block - Blocks which are broken by the ball, and may drop powerups. Each broken block adds to the score.
+    * Board - A player-controlled board moving left and right at the bottom of the screen, bounces the ball.
+    * Ball - A bouncing ball that breaks blocks when it collides with them.
+    * Block - Blocks which are broken by the ball. Each broken block adds to the score.
+    * Utility - Uility class for holding RGB color constants.
 
 ## Project Structure *(Software Lead)*
 
 The Project is broken down into the following file structure:
 
 * main.py
+* .github
+* assets
+    * ball.png
+    * class_diagram_1.png
+    * foldercontents.txt
+    * game_over_screen.png
+    * game_screen.png
+    * interface_1.jpg
+    * sbb_bg.png
+    * start_menu.png
+* etc
+    * foldercontents.txt
 * src
     * ball.py
     * block.py
     * board.py
     * controller.py
     * foldercontents.txt
-* assets
-    * ball.png
-    * class_diagram_1.png
-    * interface_1.jpg
-    * foldercontents.txt
-* etc
-    * foldercontents.txt
+    * utility.py
+
+* README.md
 
 ***
 
