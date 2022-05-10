@@ -15,6 +15,10 @@ from src import utility
 class Controller:
   
   def __init__(self):
+    '''
+    Does initial setup for the window, backgrounds, menu, sprites, labels, fps 
+    limiter, and sets the initial game state to the start menu.
+    '''
     #setup pygame data
     pygame.init()    
     self.utility = utility.Utility()
@@ -64,15 +68,20 @@ class Controller:
     self.font = pygame.font.SysFont(None, 30)
     self.lifedisplay = self.font.render(f'Lives: {self.lives}', False, self.utility.BLACK)
     self.scoredisplay = self.font.render(f'Score: {self.score}', False, self.utility.BLACK)
-    
-    #change game state to menu
-    self.state = "MENU"
 
     #limits fps
     self.clock = pygame.time.Clock()
     self.clock.tick(60)
     
+    #change game state to menu
+    self.state = "MENU"
+
   def mainloop(self):
+    '''
+    Determines which loop to enter based on the game state.
+    args: none
+    return: none
+    '''
     while self.state:
       if self.state == "MENU":
         self.menuloop()
@@ -82,67 +91,90 @@ class Controller:
         self.gameoverloop()
     
   def menuloop(self):
-    # passes events to menu based on pygame-menu
-    events = pygame.event.get()
-    if self.menu.is_enabled():
-        self.menu.update(events)
-        self.menu.draw(self.screen)
-
-    pygame.display.update()
+    '''
+    Loop for the start menu, which plays upon game start.
+    Allows the player to start the game or quit the game.
+    args: none
+    return: none
+    '''
+    while self.state == "MENU":
+    # passes events to menu based on pygame-menu 
+      events = pygame.event.get()
+      if self.menu.is_enabled():
+          self.menu.update(events)
+          self.menu.draw(self.screen)
+      pygame.display.update()
 
   def start_game(self):
     self.state = "GAME"
  
   def gameloop(self):
-    pygame.event.pump()
-
-    #collision detection
-    if self.ball.rect.x >= self.window_width or self.ball.rect.x <= 0:
-      self.ball.bounce("vertical")
-    elif self.ball.rect.y <= 0:
-      self.ball.bounce("horizontal")
-    elif self.ball.rect.y >= self.window_height:
-      self.ball.bounce("horizontal")
-      self.lives -= 1
-      if self.lives <= 0:
-        self.state = "OVER"
-
-    if pygame.sprite.groupcollide(self.balls, self.blocks, False, True):
-      self.ball.bounce("horizontal")
-      self.score += 1
-    elif pygame.sprite.groupcollide(self.balls, self.player, False, False):
-      self.ball.bounce("horizontal")
+    '''
+    Loop responsible for handling all gameplay events during the course of
+    regular gameplay. Handles collisions, events based on user inputs, and keeps 
+    track of the score and life count. Partially responsible for game
+    physics, in addition to the components handled by the models. Changes game
+    state when conditions are fulfilled (win or lose).
+    args: none
+    return: none
+    '''
+    while self.state == "GAME":
+      
+      pygame.event.pump()
   
-    # move paddle when player presses A or D
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_a]:
-      if self.board.rect.x <= 0:
-        self.board.rect.x = 0
-      else:
-        self.board.move("left")
-    if keys[pygame.K_d]:
-      if self.board.rect.x >= self.rightinviswall_x:
-        self.board.rect.x = self.rightinviswall_x
-      else:
-        self.board.move("right")
-
-    # updating lives and score
-    self.lifedisplay = self.font.render(f'Lives: {self.lives}', False, self.utility.BLACK)
-    self.scoredisplay = self.font.render(f'Score: {self.score}', False, self.utility.BLACK)
-
-    # draw everything to screen
-    self.blocks.update()
-    self.player.update()
-    self.balls.update()
-    self.screen.blit(self.background, (0,0))
-    self.blocks.draw(self.screen)
-    self.player.draw(self.screen)
-    self.balls.draw(self.screen)
-    self.screen.blit(self.lifedisplay, (10, 10))
-    self.screen.blit(self.scoredisplay, (self.window_width-85, 10))
-    pygame.display.flip()
+      #collision detection
+      if self.ball.rect.x >= self.window_width or self.ball.rect.x <= 0:
+        self.ball.bounce("vertical")
+      elif self.ball.rect.y <= 0:
+        self.ball.bounce("horizontal")
+      elif self.ball.rect.y >= self.window_height:
+        self.ball.bounce("horizontal")
+        self.lives -= 1
+        if self.lives <= 0:
+          self.state = "OVER"
+  
+      if pygame.sprite.groupcollide(self.balls, self.blocks, False, True):
+        self.ball.bounce("horizontal")
+        self.score += 1
+      elif pygame.sprite.groupcollide(self.balls, self.player, False, False):
+        self.ball.bounce("horizontal")
+    
+      # move paddle when player presses A or D
+      keys = pygame.key.get_pressed()
+      if keys[pygame.K_a]:
+        if self.board.rect.x <= 0:
+          self.board.rect.x = 0
+        else:
+          self.board.move("left")
+      if keys[pygame.K_d]:
+        if self.board.rect.x >= self.rightinviswall_x:
+          self.board.rect.x = self.rightinviswall_x
+        else:
+          self.board.move("right")
+  
+      # updating lives and score
+      self.lifedisplay = self.font.render(f'Lives: {self.lives}', False, self.utility.BLACK)
+      self.scoredisplay = self.font.render(f'Score: {self.score}', False, self.utility.BLACK)
+  
+      # draw everything to screen
+      self.blocks.update()
+      self.player.update()
+      self.balls.update()
+      self.screen.blit(self.background, (0,0))
+      self.blocks.draw(self.screen)
+      self.player.draw(self.screen)
+      self.balls.draw(self.screen)
+      self.screen.blit(self.lifedisplay, (10, 10))
+      self.screen.blit(self.scoredisplay, (self.window_width-85, 10))
+      pygame.display.flip()
     
   def gameoverloop(self):
+    '''
+    Determines game over menu based on win or lose (life count).
+    Displays game over screen, score, and quits after a 5 second delay.
+    args: none
+    return: none
+    '''
     if self.lives <= 0:
       over_message = self.font.render("You lose!", False, self.utility.WHITE) 
     else:

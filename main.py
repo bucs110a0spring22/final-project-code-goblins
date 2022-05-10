@@ -2,9 +2,6 @@ import pygame
 from src import controller
 
 
-
-
-
 def main():
     control = controller.Controller()
     control.mainloop()

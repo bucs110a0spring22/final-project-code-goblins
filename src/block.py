@@ -2,6 +2,13 @@ import pygame
 
 class Block(pygame.sprite.Sprite):
   def __init__(self, x, y, color):
+    '''
+    Sets up the block pygame sprite
+    args
+      x: (int) x position
+      y: (int) y position
+      color: (tuple) color of block in rgb
+    '''
     super().__init__()
     self.width = 65
     self.height = 30

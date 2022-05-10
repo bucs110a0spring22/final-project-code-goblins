@@ -132,5 +132,5 @@ The back end specialist was responsible for drawing class diagrams and creating 
 |  11 | Let ball hit top wall | Ball bounces horizontally (same x speed, flipped y speed). | |
 |  12 | Let life reach 0 | Game over screen displays with total score and lose message, game automatically ends after a short delay. | |
 |  13 | Break all blocks | Win game screen displays with total score and win message, game automatically ends after a short delay. | |
-| 14 | Press A until board hits left wall. | Board stops at left wall. | |
-| 15 | Press D until board hits right hall. | Board stops at right wall. | |
+| 14 | Press A until board hits left wall | Board stops at left wall. | |
+| 15 | Press D until board hits right wall | Board stops at right wall. | |
