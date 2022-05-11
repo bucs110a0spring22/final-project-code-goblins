@@ -121,8 +121,8 @@ The back end specialist was responsible for drawing class diagrams and creating 
 | Step                  | Procedure     | Expected Results  | Actual Results |
 | ----------------------|:-------------:| -----------------:| -------------- |
 |  1  | Run main.py     | Game window and start menu appears.|               |
-|  2  | Click Quit      | Program exits. | |
-|  3  | Click Play      | Game begins with a board, blocks, a ball, a score counter, and a life counter. |   |
+|  2  | Click Quit with mouse | Program exits. | |
+|  3  | Click Play with mouse | Game begins with a board, blocks, a ball, a score counter, and a life counter. |   |
 |  4  | Press A         | Board moves left. | |
 |  5  | Press D         | Board moves right. | |
 | 6 | Press A until board hits left wall | Board stops at left wall. | |
