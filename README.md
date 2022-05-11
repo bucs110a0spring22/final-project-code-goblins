@@ -6,7 +6,7 @@
 
 [Code Goblins Final Project repl](https://replit.com/join/oyhjmlfacb-walterhoess)
 
-[Super Block Breaker Presentation Demo](#)
+[Super Block Breaker Presentation Demo](demo.mp4)
 
 ### Team: Code Goblins
 #### Tajrean Ahmed, Walter Hoess, Evan Liu
@@ -92,6 +92,7 @@ The Project is broken down into the following file structure:
     * board.py
     * controller.py
     * utility.py
+* demo.mp4
 * README.md
 
 ***
@@ -124,13 +125,17 @@ The back end specialist was responsible for drawing class diagrams and creating 
 |  3  | Click Play      | Game begins with a board, blocks, a ball, a score counter, and a life counter. |   |
 |  4  | Press A         | Board moves left. | |
 |  5  | Press D         | Board moves right. | |
-|  6  | Let ball hit board | Ball bounces horizontally (same x speed, flipped y speed). | |
-|  7  | Let ball hit block | Ball bounces horizontally (same x speed, flipped y speed). Block breaks, 1 is added to the score. | |
-|  8  | Let ball hit left wall | Ball bounces vertically (flipped x speed, same y speed) | |
-|  9  | Let ball hit right wall | Ball bounces vertically (flipped x speed, same y speed) | |
-|  10  | Let ball hit bottom wall | Ball bounces horizontally (same x speed, flipped y speed). 1 life is deducted from the total count. | |
-|  11 | Let ball hit top wall | Ball bounces horizontally (same x speed, flipped y speed). | |
-|  12 | Let life reach 0 | Game over screen displays with total score and lose message, game automatically ends after a short delay. | |
-|  13 | Break all blocks | Win game screen displays with total score and win message, game automatically ends after a short delay. | |
-| 14 | Press A until board hits left wall | Board stops at left wall. | |
-| 15 | Press D until board hits right wall | Board stops at right wall. | |
+| 6 | Press A until board hits left wall | Board stops at left wall. | |
+| 7 | Press D until board hits right wall | Board stops at right wall. | |
+|  8  | Let ball hit top of board | Ball bounces horizontally (same x speed, flipped y speed). | |
+| 9 | Let ball hit bottom of board | Ball bounces horizontally. | |
+|  10  | Let ball hit left side of board | Ball bounces vertically (flipped x speed, same y speed) | | 
+| 11 | Let ball hit right side of board | Ball bounces vertically. | |
+|  12  | Let ball hit any block | Ball bounces horizontally (same x speed, flipped y speed). Block breaks, 1 is added to the score. | |
+|  13  | Let ball hit left wall | Ball bounces vertically. | |
+| 14  | Let ball hit right wall | Ball bounces vertically. | |
+|  15  | Let ball hit bottom wall | Ball bounces horizontally. 1 life is deducted from the total count. | |
+|  16 | Let ball hit top wall | Ball bounces horizontally. | |
+|  17 | Let life reach 0 | Game over screen displays with total score and lose message, game automatically ends after a short delay. | |
+|  18 | Break all blocks | Win game screen displays with total score and win message, game automatically ends after a short delay. | |
+

@@ -136,6 +136,8 @@ class Controller:
       if pygame.sprite.groupcollide(self.balls, self.blocks, False, True):
         self.ball.bounce("horizontal")
         self.score += 1
+        if len(self.blocks) == 0:
+          self.state = "OVER"
       elif pygame.sprite.groupcollide(self.balls, self.player, False, False):
         self.ball.bounce("horizontal")
     
