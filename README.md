@@ -66,6 +66,7 @@ Final game over screen.
     * Ball - A bouncing ball that breaks blocks when it collides with them.
     * Block - Blocks which are broken by the ball. Each broken block adds to the score.
     * Utility - Utility class for holding RGB color constants.
+    * Controller - Controller for our block breaker game. Responsible for initializing the window and controlling the appearance of the menu, game screen, and game over screen. Updated scores and life based on in-game events. Applied in-game physics as implemented by functions in the models, responded to player input, responded to in-game events (e.g. collisions), and managed game state. Data permanence was implemented by recording all previously obtained scores in \etc\scoreboard.
 
 ## Project Structure *(Software Lead)*
 
